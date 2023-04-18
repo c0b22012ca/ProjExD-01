@@ -11,13 +11,14 @@ def main():
     kk_imgc=pg.transform.rotozoom(kk_img,10,1.0)
     sur=[kk_img,kk_imgc]
     tmr = 0
-
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         tmr += 1
-        screen.blit(bg_img, [0, 0])
+        x=tmr%1600
+        screen.blit(bg_img,[-x,0])
+        screen.blit(bg_img,[1600-x,0])
         if tmr%2==0:
             screen.blit(sur[0],[300,200])
         else:
