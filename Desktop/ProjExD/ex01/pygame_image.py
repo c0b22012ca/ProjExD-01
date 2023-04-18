@@ -18,6 +18,10 @@ def main():
 
         tmr += 1
         screen.blit(bg_img, [0, 0])
+        if tmr%2==0:
+            screen.blit(sur[0],[300,200])
+        else:
+            screen.blit(sur[1],[300,200])
         pg.display.update()
         clock.tick(100)
 
