@@ -8,6 +8,8 @@ def main():
     bg_img = pg.image.load("ex01/fig/pg_bg.jpg")
     kk_img = pg.image.load("ex01/fig/3.png")
     kk_img = pg.transform.flip(kk_img,True,False)
+    kk_imgc=pg.transform.rotozoom(kk_img,10,1.0)
+    sur=[kk_img,kk_imgc]
     tmr = 0
 
     while True:
